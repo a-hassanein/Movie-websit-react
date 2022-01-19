@@ -1,5 +1,10 @@
 import {Link} from "react-router-dom";
+import Badge from 'react-bootstrap/Badge'
+import { useSelector } from "react-redux";
+
+
 function NavBar() {
+    const count =useSelector(state => state.count)
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
         <div className="container-fluid">
@@ -8,7 +13,14 @@ function NavBar() {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
                 <Link  className="nav-link active" to="/" style={{fontSize:"1.5em" }}>Home</Link>
-                <Link  className="nav-link" to="/movie" style={{fontSize:"1.5em" }}>Top Rated</Link>
+                <div>
+                <Link  className="nav-link" to="/favorites" style={{fontSize:"1.5em" }}>Favorites 
+                <Badge pill bg="warning" text="dark" className="far fa-star text-center" style={{maxWidth:"35px",width:"100%",maxHeight:"35px" ,height:"100%" ,display:"inline" ,position:"sticky" ,margin:"10px"}}>
+                    {count}
+                </Badge>
+                
+                </Link> 
+                </div>
             </div>
             </div>
             <form className="d-flex">

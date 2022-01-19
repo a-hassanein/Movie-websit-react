@@ -7,6 +7,8 @@ import Home from "./pages/Home"
 import Footer from "./pages/Footer"
 import LoginForm from "./pages/Loginform"
 import Registerform from "./pages/Registerform"
+import Favorites from "./pages/Favorites"
+
 
 
 
@@ -20,6 +22,7 @@ function App() {
           <Route path="/movie/:id" component={Movie} exact />
           <Route path="/signin" component={LoginForm} exact />
           <Route path="/signup" component={Registerform} exact />
+          <Route path="/favorites" component={Favorites} exact />
         </Switch>
       <Footer/>
     </Router>
