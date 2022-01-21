@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import NavBar from "./pages/NavBar"
 import Movie from "./pages/Movie"
 import Home from "./pages/Home"
@@ -8,8 +8,6 @@ import Footer from "./pages/Footer"
 import LoginForm from "./pages/Loginform"
 import Registerform from "./pages/Registerform"
 import Favorites from "./pages/Favorites"
-
-
 
 
 function App() {
